@@ -1,0 +1,17 @@
+export default {
+  'menu.dashboard': '实时看板',
+  'menu.transaction': '交易',
+  'menu.account': '账户',
+  'menu.assets': '资产',
+  'menu.creditCard': '信用卡',
+  'menu.loans': '贷款',
+  'menu.equipment': '设备',
+  'menu.privilege': '我的特权',
+  'menu.settings': '设置',
+  'login.accountPasswordError': '账户或密码错误',
+  'login.usernamePlaceholder': '用户名: admin or user',
+  'login.pleaseEnterUsername': '请输入用户名',
+  'login.passwordPlaceholder': '密码: 123456',
+  'login.pleaseEnterPassword': '请输入密码',
+  'login.success': '登录成功！',
+};
