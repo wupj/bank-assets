@@ -20,6 +20,22 @@ export async function getExpenseRecord() {
 export async function getLastSaleList(data?: { [key: string]: any }) {
   return request('/api/getLastSaleList', { method: 'post', data });
 }
+// 获取年总投资
+export async function getTotalAnnualInvestment(data?: { [key: string]: any }) {
+  return request('/api/getTotalAnnualInvestment', { method: 'post', data });
+}
+// 获取月收入
+export async function getMonthIncome(data?: { [key: string]: any }) {
+  return request('/api/getMonthIncome', { method: 'post', data });
+}
+// 获取趋势
+export async function getAssets(data?: { [key: string]: any }) {
+  return request('/api/getAssets', { method: 'post', data });
+}
+// 获取月收入
+export async function getTrend(data?: { [key: string]: any }) {
+  return request('/api/getTrend', { method: 'post', data });
+}
 // 获取活跃贷款概况
 export async function getLoanOverview(data?: { [key: string]: any }) {
   return request('/api/getLoanOverview', { method: 'post', data });
