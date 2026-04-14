@@ -71,13 +71,13 @@ export default [
     access: 'canAccess',
     component: './equipment',
   },
-  {
+  /*  {
     path: '/privilege',
     name: 'privilege',
     icon: 'icon-park-outline:permissions',
     access: 'canAccess',
     component: './privilege',
-  },
+  },*/
   {
     path: '/settings',
     name: 'settings',
