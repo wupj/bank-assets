@@ -67,6 +67,7 @@ export const layout: RunTimeLayoutConfig = ({
   setInitialState,
 }) => {
   return {
+    className: 'page-layout',
     actionsRender: () => [<SelectLang key="SelectLang" />],
     avatarProps: {
       title: <AvatarName />,
