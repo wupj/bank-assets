@@ -1,6 +1,6 @@
 import { CreditCardOutlined, PlusOutlined } from '@ant-design/icons';
 import { useIntl, useRequest } from '@umijs/max';
-import { Card, Spin, Divider  } from 'antd';
+import { App, Card, Divider, Spin } from 'antd';
 import React from 'react';
 import { getBankList } from '@/services';
 
@@ -13,8 +13,14 @@ const getList = async () => {
 
 const BankCard: React.FC = () => {
   const intl = useIntl();
+  const { message } = App.useApp();
 
-  const { loading, data } = useRequest(getList);
+  const { loading, data, run } = useRequest(getList);
+
+  const addCard = () => {
+    run();
+    message.success('add card');
+  }
 
   return (
     <>
@@ -22,7 +28,7 @@ const BankCard: React.FC = () => {
         <div className="card-title">
           {intl.formatMessage({ id: 'transaction.myBankCard' })}
         </div>
-        <div>
+        <div onClick={addCard}>
           <PlusOutlined />
           {intl.formatMessage({ id: 'transaction.addCard' })}
         </div>

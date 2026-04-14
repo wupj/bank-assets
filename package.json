@@ -39,7 +39,9 @@
     "echarts": "^6.0.0",
     "echarts-for-react": "^3.0.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-activation": "^0.13.4",
+    "react-dom": "^19.1.0",
+    "umi-plugin-keep-alive": "0.0.1-beta.35"
   },
   "devDependencies": {
     "@ant-design/pro-cli": "^3.3.0",
@@ -56,11 +58,11 @@
     "gh-pages": "^6.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
+    "tailwindcss": "^3",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "umi-presets-pro": "^2.0.3",
-    "umi-serve": "^1.9.11",
-    "tailwindcss": "^3"
+    "umi-serve": "^1.9.11"
   },
   "engines": {
     "node": ">=20.0.0"

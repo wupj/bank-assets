@@ -174,4 +174,5 @@ export default defineConfig({
   requestRecord: {},
   exportStatic: {},
   tailwindcss: {},
+  plugins: ['umi-plugin-keep-alive'],
 });

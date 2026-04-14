@@ -20,3 +20,7 @@ export async function getExpenseRecord() {
 export async function getLastSaleList(data?: { [key: string]: any }) {
   return request('/api/getLastSaleList', { method: 'post', data });
 }
+// 获取活跃贷款概况
+export async function getLoanOverview(data?: { [key: string]: any }) {
+  return request('/api/getLoanOverview', { method: 'post', data });
+}
