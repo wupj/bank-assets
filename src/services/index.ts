@@ -9,6 +9,22 @@ export async function getCurrentAccountInfo() {
   return request('/api/getCurrentAccountInfo', { method: 'get' });
 }
 // 获取银行卡
+export async function getWeekActivity() {
+  return request('/api/getWeekActivity', { method: 'post' });
+}
+// 获取消费数据
+export async function getConsume() {
+  return request('/api/getConsume', { method: 'post' });
+}
+// 获取人员
+export async function getPersonnel() {
+  return request('/api/getPersonnel', { method: 'post' });
+}
+// 获取余额记录
+export async function getBalanceRecord() {
+  return request('/api/getBalanceRecord', { method: 'post' });
+}
+// 获取银行卡
 export async function getBankList() {
   return request('/api/getBankList', { method: 'get' });
 }

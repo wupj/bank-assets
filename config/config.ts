@@ -122,6 +122,9 @@ export default defineConfig({
           fontFamily: 'AlibabaSans, sans-serif',
         },
       },
+      input: {
+        allowClear: true,
+      },
     },
   },
   /**

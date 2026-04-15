@@ -1,0 +1,80 @@
+import { useIntl, useRequest } from '@umijs/max';
+import { Card, Spin } from 'antd';
+import classNames from 'classnames';
+import * as echarts from 'echarts/core';
+import React, { useMemo } from 'react';
+import Chart from '@/components/Chart';
+import { getBalanceRecord } from '@/services';
+
+import useStyles from '../style.style';
+
+const getList = async () => {
+  const res = await getBalanceRecord();
+  return {
+    data: res.data || [],
+  };
+};
+
+const BalanceRecord: React.FC = () => {
+  const { styles } = useStyles();
+  const intl = useIntl();
+
+  const { loading, data } = useRequest(getList);
+
+  const options = useMemo(() => {
+    return {
+      grid: {
+        top: 10,
+        right: 10,
+        bottom: 10,
+        left: 10,
+      },
+      tooltip: {
+        trigger: 'axis',
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+      },
+      yAxis: {
+        type: 'value',
+      },
+      dataset: {
+        source: data || [],
+      },
+      series: [
+        {
+          type: 'line',
+          smooth: true,
+          encode: {
+            x: 'week',
+            y: 'amount',
+          },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: '#ffbb38' },
+              { offset: 1, color: '#fff' },
+            ]),
+          },
+        },
+      ],
+    };
+  }, [data]);
+
+  return (
+    <>
+      <div className="flex-between">
+        <div className="card-title">
+          {intl.formatMessage({ id: 'dashboard.balanceHistory' })}
+        </div>
+      </div>
+      <Spin spinning={loading}>
+        <Card className={classNames(styles.cardWrapper, 'h-[280px]')}>
+          <Chart options={options} />
+        </Card>
+      </Spin>
+    </>
+  );
+};
+
+export default BalanceRecord;
