@@ -1,7 +1,14 @@
 import React from 'react';
+import ServiceList from './components/ServiceList';
+import Statistic from './components/Statistic';
 
 const Equipment: React.FC = () => {
-  return <div>设备</div>;
+  return (
+    <>
+      <Statistic />
+      <ServiceList />
+    </>
+  );
 };
 
 export default Equipment;

@@ -36,7 +36,16 @@ export async function getAssets(data?: { [key: string]: any }) {
 export async function getTrend(data?: { [key: string]: any }) {
   return request('/api/getTrend', { method: 'post', data });
 }
+// 获取银行卡消费数据
+export async function getConsumptionData(data?: { [key: string]: any }) {
+  return request('/api/getConsumptionData', { method: 'post', data });
+}
 // 获取活跃贷款概况
 export async function getLoanOverview(data?: { [key: string]: any }) {
   return request('/api/getLoanOverview', { method: 'post', data });
 }
+// 获取银行服务清单列表
+export async function getServiceList(data?: { [key: string]: any }) {
+  return request('/api/getServiceList', { method: 'post', data });
+}
+
