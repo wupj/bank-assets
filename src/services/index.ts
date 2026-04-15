@@ -20,6 +20,14 @@ export async function getExpenseRecord() {
 export async function getLastSaleList(data?: { [key: string]: any }) {
   return request('/api/getLastSaleList', { method: 'post', data });
 }
+// 获取已发送发票
+export async function getSendInvoice(data?: { [key: string]: any }) {
+  return request('/api/getSendInvoice', { method: 'post', data });
+}
+// 获取贷款概览
+export async function getCreditOverview(data?: { [key: string]: any }) {
+  return request('/api/getCreditOverview', { method: 'post', data });
+}
 // 获取年总投资
 export async function getTotalAnnualInvestment(data?: { [key: string]: any }) {
   return request('/api/getTotalAnnualInvestment', { method: 'post', data });

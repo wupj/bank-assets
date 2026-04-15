@@ -25,6 +25,7 @@ const ConsumeData: React.FC = () => {
       legend: {
         bottom: 0,
       },
+      tooltip: {},
       dataset: {
         source: data || [],
       },

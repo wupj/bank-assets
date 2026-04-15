@@ -28,6 +28,7 @@ const Consumption: React.FC = () => {
         bottom: 10,
         left: 10,
       },
+      tooltip: {},
       xAxis: {
         type: 'category',
       },
